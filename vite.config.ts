@@ -12,7 +12,7 @@ export default defineConfig(({ command }) => {
         '@': path.resolve(import.meta.dirname, '.'),
       },
     },
-    base: '/ajotamart67/',
+    
       chunkSizeWarningLimit: 1500,
     },
     server: {
