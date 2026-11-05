@@ -1,0 +1,61 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --brand-orange: #C2570C;
+    --brand-amber: #E8890C;
+    --brand-gold: #F5B718;
+    --brand-dark: #1B1209;
+    --brand-cream: #FFF8EC;
+  }
+
+  body {
+    font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1B1209;
+    background-color: #FCF9F2;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .dark body,
+  body.dark {
+    color: #F3ECE2;
+    background-color: #120C06;
+  }
+}
+
+/* Hide scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Shimmer animation for image skeleton loader */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, #f5efe6 25%, #ede3d3 50%, #f5efe6 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.dark .animate-shimmer {
+  background: linear-gradient(90deg, #24190F 25%, #332317 50%, #24190F 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Safe bottom spacing for mobile bottom bar */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}

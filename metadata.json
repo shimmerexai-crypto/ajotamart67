@@ -1,0 +1,6 @@
+{
+  "name": "Ajota Mart - Jodhpur's One-Stop Mart",
+  "description": "Jodhpur's favourite neighbourhood mart for groceries, cosmetics, stationery, and home essentials at Badla Road. Fast local delivery across Jodhpur.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

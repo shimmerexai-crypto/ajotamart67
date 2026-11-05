@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient: Orange to Dark Brown -->
+    <radialGradient id="amBgGrad" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#E8890C" />
+      <stop offset="55%" stop-color="#C2570C" />
+      <stop offset="100%" stop-color="#1B1209" />
+    </radialGradient>
+
+    <!-- Gold Metallic Octagon Gradient -->
+    <linearGradient id="amGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE885" />
+      <stop offset="25%" stop-color="#F5B718" />
+      <stop offset="50%" stop-color="#DF9B09" />
+      <stop offset="75%" stop-color="#FDE882" />
+      <stop offset="100%" stop-color="#B87702" />
+    </linearGradient>
+
+    <!-- Inner Shadow / Glow Filter -->
+    <filter id="amShadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.45" />
+    </filter>
+
+    <filter id="amInnerGlow">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#FFFFFF" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Outer Circle with Orange-Brown Radial Gradient -->
+  <circle cx="256" cy="256" r="248" fill="url(#amBgGrad)" filter="url(#amShadow)" />
+  
+  <!-- Subtle Outer Rim Accent -->
+  <circle cx="256" cy="256" r="236" fill="none" stroke="#F5B718" stroke-width="2.5" stroke-opacity="0.5" stroke-dasharray="6,4" />
+
+  <!-- Gold Octagon Path: centered, symmetrical octagon -->
+  <!-- Coordinates calculated for regular octagon r=175: 
+       top horizontal: (185, 81) to (327, 81)
+       top-right slant: (327, 81) to (431, 185)
+       right vertical: (431, 185) to (431, 327)
+       bottom-right slant: (431, 327) to (327, 431)
+       bottom horizontal: (327, 431) to (185, 431)
+       bottom-left slant: (185, 431) to (81, 327)
+       left vertical: (81, 327) to (81, 185)
+       top-left slant: (81, 185) to (185, 81)
+  -->
+  <polygon points="185,81 327,81 431,185 431,327 327,431 185,431 81,327 81,185" 
+           fill="none" 
+           stroke="url(#amGoldGrad)" 
+           stroke-width="16" 
+           stroke-linejoin="round"
+           filter="url(#amShadow)" />
+
+  <!-- Inner Octagon Thin Accent -->
+  <polygon points="191,101 321,101 411,191 411,321 321,411 191,411 101,321 101,191" 
+           fill="none" 
+           stroke="#FFF8EC" 
+           stroke-width="2" 
+           stroke-opacity="0.4"
+           stroke-linejoin="round" />
+
+  <!-- Shopping Cart Icon above / integrated with AM -->
+  <g transform="translate(256, 185) scale(0.95)" filter="url(#amInnerGlow)">
+    <!-- Cart Body Basket -->
+    <path d="M -54 -38 L -38 -38 L -20 18 L 46 18 L 56 -24 L -10 -24" 
+          fill="none" 
+          stroke="url(#amGoldGrad)" 
+          stroke-width="7" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
+    <!-- Basket Cross grid -->
+    <line x1="-12" y1="-8" x2="48" y2="-8" stroke="#FFE885" stroke-width="3" stroke-linecap="round" opacity="0.8" />
+    <line x1="-4" y1="6" x2="40" y2="6" stroke="#FFE885" stroke-width="3" stroke-linecap="round" opacity="0.8" />
+    <line x1="8" y1="-22" x2="0" y2="16" stroke="#FFE885" stroke-width="3" stroke-linecap="round" opacity="0.8" />
+    <line x1="28" y1="-22" x2="20" y2="16" stroke="#FFE885" stroke-width="3" stroke-linecap="round" opacity="0.8" />
+    <!-- Wheels -->
+    <circle cx="-14" cy="32" r="7" fill="#F5B718" stroke="#1B1209" stroke-width="2.5" />
+    <circle cx="36" cy="32" r="7" fill="#F5B718" stroke="#1B1209" stroke-width="2.5" />
+    <!-- Hubcaps -->
+    <circle cx="-14" cy="32" r="2.5" fill="#FFF8EC" />
+    <circle cx="36" cy="32" r="2.5" fill="#FFF8EC" />
+  </g>
+
+  <!-- "AM" Bold Monogram in Center-Bottom -->
+  <text x="256" y="340" 
+        text-anchor="middle" 
+        font-family="'Poppins', 'Inter', -apple-system, sans-serif" 
+        font-weight="900" 
+        font-size="108" 
+        letter-spacing="5"
+        fill="url(#amGoldGrad)"
+        filter="url(#amShadow)">AM</text>
+
+  <!-- Tagline / Subtitle Curve / Badge at bottom inside circle -->
+  <g transform="translate(256, 382)">
+    <rect x="-96" y="-12" width="192" height="24" rx="12" fill="#1B1209" fill-opacity="0.7" stroke="#F5B718" stroke-width="1.5" />
+    <text x="0" y="5" 
+          text-anchor="middle" 
+          font-family="'Poppins', 'Inter', sans-serif" 
+          font-weight="700" 
+          font-size="12" 
+          letter-spacing="2.5"
+          fill="#FFF8EC">AJOTA MART</text>
+  </g>
+</svg>
